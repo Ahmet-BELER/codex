@@ -1,3 +1,17 @@
 .home{
-    height:75vh;
+   
+    margin:10px;
+}
+
+.books{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+    
+
+}
+
+.booksCover{
+    height:100vh;
 }

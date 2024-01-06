@@ -57,6 +57,7 @@ const booksSlices = createSlice({
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
       state.loading = false;
       state.books = action.payload; // books state'ini güncelle
+      
     });
 
     builder.addCase(fetchBooks.rejected, (state, action) => {
