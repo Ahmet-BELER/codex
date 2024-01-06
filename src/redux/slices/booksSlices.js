@@ -9,7 +9,7 @@ const initialState = {
   error: null,
 };
 
-
+const apiKey = process.env.key
 export const fetchBooks = createAsyncThunk("fetchBooks", async (params) => {
   console.log("fetchBooks içine girdi");
   try {
@@ -18,7 +18,7 @@ export const fetchBooks = createAsyncThunk("fetchBooks", async (params) => {
       {
         params: {
           q: "flowers+inauthor:keyes",
-          key: "AIzaSyBuAlkox7iWJA44tO1Zs-ivCeSRGY5Cw-U", 
+          key: apiKey, 
         },
       }
     );
