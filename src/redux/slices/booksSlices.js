@@ -9,7 +9,8 @@ const initialState = {
   error: null,
 };
 
-const apiKey = process.env.key
+const apiKey = process.env.REACT_APP_API_KEY;
+
 export const fetchBooks = createAsyncThunk("fetchBooks", async (params) => {
   console.log("fetchBooks içine girdi");
   try {
