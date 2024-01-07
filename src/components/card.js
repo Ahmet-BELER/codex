@@ -11,12 +11,15 @@ export default function Card({book}) {
   <img alt="imgCard" className="cardİmage" src={book.volumeInfo.imageLinks.thumbnail} />
 )}
 
-                <div className="card-body">
+<div className="card-body">
+    <h5 className="card-title">{book.volumeInfo.title}</h5>
+    <p className="card-text">{book.volumeInfo.authors[0]}     {book.volumeInfo.authors.length > 1 && (
+        <p className="card-text">{book.volumeInfo.authors[1]}</p>
+    )}</p>
 
-                    <h5 class="card-title">{book.volumeInfo.title}</h5>
-                    <p class="card-text">Kart içeriği 1.</p>
+</div>
+<button className='miniButton'>Sepete ekle</button>
 
-                </div>
 
 
             </div>

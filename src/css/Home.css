@@ -2,16 +2,28 @@
    
     margin:10px;
 }
-
+.inputCover{
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom:20px;
+    margin-right:5%;
+}
 .books{
     display:flex;
     flex-direction:row;
-    justify-content:center;
+    justify-content:start;
     flex-wrap:wrap;
     
 
 }
 
 .booksCover{
-    height:100vh;
+   
+}
+.pagination{
+    display: flex;
+
+    justify-content: center;
+    gap:10px;
+    margin: 10px;
 }
