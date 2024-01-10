@@ -15,9 +15,21 @@ export default function Header() {
         <div className="top">
 
             <div className="header">
+                <Link to={`/`}>
 
+                    <img src={"/image/openlibrary-logo.svg"} alt='headerİmage' />
+                </Link>
+            </div>
 
-                <img src={"/image/openlibrary-logo.svg"}  alt='headerİmage'/>
+            <div className="sepetCover">
+                <div>{sepetBooks.length}</div>
+                <div>
+                    <div className="sepetIcon">
+                        <Link to={`/sepet`}>
+                            <img src={"/image/shopping.png"} className="icon" alt="whatsap" />
+                        </Link>
+                    </div>
+                </div>
 
             </div>
 

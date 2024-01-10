@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import "../css/Home.css";
 import Card from "../components/card";
-
 import { useDispatch } from "react-redux";
-import { fetchBooks } from "../redux/slices/booksSlices";
+import { fetchBooks ,addToSepet} from "../redux/slices/booksSlices";
 
 const PAGE_SIZE = 8;
 
 export default function Home() {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchText, setSearchText] = useState("")
 
   useEffect(() => {
     dispatch(fetchBooks());
@@ -33,14 +33,39 @@ export default function Home() {
 
   const indexOfLastBook = currentPage * PAGE_SIZE;
   const indexOfFirstBook = indexOfLastBook - PAGE_SIZE;
-  const currentBooks = BooksItems.slice(indexOfFirstBook, indexOfLastBook);
+  const filteredBooks = BooksItems.filter((book) => 
+  
+    book.volumeInfo.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+
+
+  const currentBooks = filteredBooks.slice(indexOfFirstBook, indexOfLastBook);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+
+
 
   return (
     <div className="home">
       <div className="inputCover">
-        <input placeholder="search Author" />
+      <div className="container ">
+      <div className="input-group" style={{ maxWidth: '300px' }}>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Kitap adı"
+          aria-label="Search"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          
+        />
+        <button className="btn btn-outline-primary" type="button" id="search-btn">
+          Ara
+        </button>
+      </div>
+    </div>
       </div>
 
       <div className="booksCover">

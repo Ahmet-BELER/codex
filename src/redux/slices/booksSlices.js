@@ -12,7 +12,7 @@ const initialState = {
 const apiKey = process.env.REACT_APP_API_KEY;
 
 export const fetchBooks = createAsyncThunk("fetchBooks", async (params) => {
-  console.log("fetchBooks içine girdi");
+
   try {
     const response = await axios.get(
       "https://www.googleapis.com/books/v1/volumes",
@@ -24,7 +24,7 @@ export const fetchBooks = createAsyncThunk("fetchBooks", async (params) => {
       }
     );
 
-    console.log(response.data, "response books");
+    
     return response?.data;
   } catch (error) {
     console.error("Kitaplar alınırken hata oluştu:", error);

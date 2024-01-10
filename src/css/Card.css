@@ -1,15 +1,21 @@
 
 .cardCover{
-
-    height:120;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    padding: 5px;
 }
+
+    
+
 .my-custom-class{
     display:flex;
     flex-direction:column;
     align-items:center;
-    width:95%;
+    width:100%;
+    max-width:250px;
     justify-content:center !important;
+    background-color:#f4f4f4;
  
    
     
@@ -20,6 +26,9 @@
     width:100%;
     
 }
+.cardİmage:hover{
+   
+}
 .card-body{
 width:100%;
 display: flex;
@@ -28,18 +37,37 @@ align-items: center;
 margin-top:5px;
 margin-bottom:5px;
 background-color:#f4f4f4;
-max-width:200px;
+max-width:250px;
 font-family:Arial,sans-serif;
+justify-content: center;
 }
 .miniButton{
     color:#fff;
     background-color:#0376b8;
     border-radius:5px;
     border:none;
-    width:55%;
+    max-width:250px;
+    width:100%;
     height:50px;
 }
 
 .miniButton:hover {
     background-color:#003266;
      }
+
+.card-title{
+    display: flex;
+
+}
+.card-text{
+    font-weight:bold;
+}     
+
+.custom-link {
+    text-decoration: none;  
+    color: inherit;  
+    width: 100%;
+}
+.custom-link:hover {
+    width:120%;
+}

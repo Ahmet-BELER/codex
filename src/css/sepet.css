@@ -1,0 +1,43 @@
+.sepetDetail{
+    height:100%;
+    display:flex;
+}
+
+.sepet_Cover{
+    display:flex;
+    flex-direction:row;
+  
+  
+}
+.sepetList1{
+    margin-top:20px;
+}
+.sepet-book1{
+    margin-top:20px;
+}
+.bookSepet1{
+height:100vh;
+
+}
+.bookInt{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:space-between;
+}
+.emptyCover {
+    justify-content: center;  
+    align-items: center;    
+    height: 100vh;            
+  }
+  .total1{
+    font-size:20px;
+    font-weight:bold;
+    color:green;
+    margin-left:40px;
+    margin-top:auto;
+    
+  }
+  .btn1{
+    margin-left:20px
+  }
