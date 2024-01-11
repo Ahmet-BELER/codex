@@ -22,7 +22,7 @@ export default function Header() {
             </div>
 
             <div className="sepetCover">
-                <div>{sepetBooks.length}</div>
+                <div className='sepetLength'>{sepetBooks.length}</div>
                 <div>
                     <div className="sepetIcon">
                         <Link to={`/sepet`}>

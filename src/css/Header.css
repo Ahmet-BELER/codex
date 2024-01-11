@@ -7,7 +7,19 @@
   
 }
 
-
+.sepetLength{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    color:#fff;
+    border-color:1px solid blue;
+    background-color:blue;
+    font-size:18px;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
 
 .header{
     margin:10px; 
